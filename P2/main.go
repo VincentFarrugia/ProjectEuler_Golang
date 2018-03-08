@@ -21,9 +21,24 @@ import (
 func main() {
 
 	start := time.Now()
-	equationAttempt()
+	simplifiedAttempt()
 	elapsed := time.Since(start)
 	fmt.Printf("Operation took %vns\n", elapsed.Nanoseconds())
+}
+
+func simplifiedAttempt() {
+	exclusiveLimit := 4000000
+	sumOfEvenTerms := 0
+	fibTermA := 1
+	fibTermB := 1
+	currentEvenFibTerm := fibTermA + fibTermB
+	for currentEvenFibTerm < exclusiveLimit {
+		sumOfEvenTerms += currentEvenFibTerm
+		fibTermA = fibTermB + currentEvenFibTerm
+		fibTermB = currentEvenFibTerm + fibTermA
+		currentEvenFibTerm = fibTermA + fibTermB
+	}
+	fmt.Printf("The Sum of the Even-valued Fibonacci numbers in the range (%d : %d] is: %d\n", 0, exclusiveLimit, sumOfEvenTerms)
 }
 
 func equationAttempt() {
