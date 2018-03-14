@@ -26,6 +26,10 @@ func main() {
 	fmt.Printf("Operation took %vns\n", elapsed.Nanoseconds())
 }
 
+//////////////////////////////////////////////////////////////
+// FINAL ANSWER
+//////////////////////////////////////////////////////////////
+
 func simplifiedAttempt() {
 	exclusiveLimit := 4000000
 	sumOfEvenTerms := 0
@@ -40,6 +44,10 @@ func simplifiedAttempt() {
 	}
 	fmt.Printf("The Sum of the Even-valued Fibonacci numbers in the range (%d : %d] is: %d\n", 0, exclusiveLimit, sumOfEvenTerms)
 }
+
+//////////////////////////////////////////////////////////////
+// WORKSPACE (Train of thought not used in the final answer)
+//////////////////////////////////////////////////////////////
 
 func equationAttempt() {
 
@@ -88,3 +96,5 @@ func firstAttempt() {
 
 	fmt.Printf("The Sum of the Even-valued Fibonacci numbers in the range (%d : %d] is: %d\n", firstFibTerm-1, exclusiveLimit, sumOfEvenTerms)
 }
+
+//////////////////////////////////////////////////////////////
